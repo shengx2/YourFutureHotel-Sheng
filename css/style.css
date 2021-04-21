@@ -1,0 +1,414 @@
+/***************************************
+1. Universal Styles
+2. Header & Nav styles
+3. Main Body Content
+4. Classes, ID's and styling
+5. Restaurant Menu
+6. Media Queries
+****************************************/
+
+/***************************************
+****************************************
+COLOR GUIDE:
+
+#f8f4e8 (background, Button Annuleren)
+#444444 (text)
+#White (Header H1, Section background, Sub Navigation 
+Link background, Button Reserveren font color, table header font)
+#111111 (Navigation and tabel caption)
+#cecece (Navigation anchor) 
+#ce1b28 (Anchor, Button Annuleren font, 
+Button Reserveren Hover Background, flex Item): 
+#474747 (Font color Sub Navigation Link) 
+#Grey (Button Reserveren) 
+#RGBA(252, 0, 0 0.5) (Table Border)
+#RGBA(86, 86, 86, 0.3) (Table data and tabel header)
+RGBA(0, 0, 0, 1) (background color table header)
+****************************************
+****************************************/
+
+
+/***************************************
+****************************************
+1. Universal Styles
+****************************************
+****************************************/
+html {box-sizing: border-box;}
+
+*, *:before, *:after {box-sizing: inherit;}
+
+:root {
+    background-color: #f8f4e8;
+    color: #444444;
+    font-family: sans-serif;
+    font-size: 13px;
+    --standard-size: 500px;
+    margin: 0;
+    padding: 0;
+}
+main {
+    width: 75%;
+    margin: 0 auto;
+    margin-top: 1rem;
+}
+h1 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 15px 0px;
+}
+h2 {
+    font-size: 21px;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+}
+/***************************************
+****************************************
+2. Header & Nav styling
+****************************************
+****************************************/
+.headerHero {
+    background-image: url(../images/hotelHeader.jpg);
+    height: 720px;
+    background-size: 100% 100%;
+    background-size: cover;
+    background-position: center;
+}   
+.headerStyling {
+    color: white;
+    flex: 1 0 50px;
+    margin-top: 300px;
+}
+nav {
+    background-color: #111111;
+    font-size: 2rem;
+    text-align: center;
+}
+nav a{
+    color: #cecece;
+    text-decoration: none;
+}
+/***************************************
+****************************************
+3. Main Content
+****************************************
+****************************************/
+section {
+    background-color: #fcfcfc;
+    margin-bottom: 1rem;
+    padding: 5%;
+    border: inset 1px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    box-shadow: 0px 0px 4px 1px rgba(0, 0, 0, 0.025);
+}
+dl, p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    margin: 2rem;
+}
+a {
+    color: #ce1b28;
+    font-size: 1.2rem;
+    text-decoration: none;
+}
+
+li {display: inline;}
+
+ul {padding: 0.5rem;}
+
+/***************************************
+****************************************
+4. Classes, ID's and styling
+****************************************
+****************************************/
+.active {text-decoration: underline;}
+
+.subNav {
+    background-color: transparent;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.subNavLink, #sluitModal {
+    background-color: white;
+    border-radius: 4px;
+    color: #474747;
+    padding: 8px;
+    text-decoration: none;
+}
+#linkLocatie {
+    font-size: 1.2rem;
+    padding: 5%;
+    text-align: center;
+}
+.kamerStyling {
+    display: block;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+#pointer {cursor: pointer;}
+
+#bevestigingstandaard, #bevestigingfamilie, #bevestigingsuite {display: none;}
+
+#reserveerbevestiging{
+    display: none;
+    text-align: center;
+}
+.reserveerBtn {
+    background-color: grey ; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+.annulerenBtn {
+    background-color: lightgrey;
+    border-radius: 10px;
+    color: red ;
+    padding: 0.5rem 1rem;
+}
+.locatieBox {
+    height: 350px;
+    width: 49%;
+}
+.contactBox {
+    height: 350px;
+    width: 49%;
+}
+.flexContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.left {
+    float: left;
+}
+.right {
+    float: right;
+}
+.flexItem {
+    border: 1px solid red;
+    flex: 1 0 50px;
+    height: auto;
+    font-size: large;
+    margin: 0;
+    padding: 0 5px;
+}
+.flexItem p {height:100px;}
+
+article img {
+    display: block;
+    height: 150px;
+    margin: auto;
+    width: 250px;
+}
+.reserveerBtn:hover {
+    background-color: red ; 
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    padding: 16px 32px;
+    text-align: center;
+    text-decoration: none;
+    transition-duration: 0.4s;
+}
+
+article h3 {height: 30px;}
+
+/***************************************
+****************************************
+5. Restaurant Menu
+****************************************
+****************************************/
+
+table {
+    border: 2px solid RGBA(252, 0, 0, 0.7);
+    border-collapse: collapse;
+    margin: 0 auto;
+    width: 75%;
+  }
+  td, th {
+    padding: 5px;
+    width: 10%;
+    border-bottom: 1px solid RGBA(68, 68, 68, 0.3);
+  }
+  caption {
+    font-weight: 600;
+    text-align: left;
+    font-size: 1.5rem;
+    padding: 0.5rem 0;
+    color: black;
+  }
+  .stylingMenu {
+    text-align: left;
+    background-color: RGBA(0, 0, 0, 1);
+    color: white;
+  }
+
+/***************************************
+****************************************
+6. Validation
+****************************************
+****************************************/
+
+input:valid {
+	border: 2px solid green;
+}
+input:invalid {
+	border: 2px dashed rgb(194, 18, 18)
+}
+
+/***************************************
+****************************************
+7. Form Styling
+****************************************
+****************************************/
+
+input, form {
+	font-family: inherit;
+    font-size: 14px;
+}
+input, select {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}
+input[type="text"], input[type="email"], input[type="number"], input[type="date"], input[type="email"], select, label{
+    display: block;
+}
+input[type="radio"] + label {display: inline;}
+
+fieldset {
+    border-width: 0;
+    padding: 0;
+}
+input[type="text"], input[type="email"], input[type="date"], input[type="number"], legend {
+    width: 90%;
+    margin: 1rem auto 1rem auto;
+}
+#bookingForm {
+    background-color: #f8f4e8;
+    border: 1px solid red;
+    width: 75%;
+    margin: 20px auto;
+}
+
+select, fieldset {margin: 1rem auto 1rem auto;}
+
+#postcode, #aankomstdatum, #vertrekdatum, #aantalKamers {max-width: 20%;}
+
+#voornaam, #achternaam, #adres, #email, #plaats {max-width: 25%;}
+
+/***************************************
+****************************************
+8. Media Queries
+****************************************
+****************************************/
+@media screen and (max-width:1250px){
+    .headerHero {
+        height: 300px;
+        background-size: 100% 100%;
+        background-size: cover;
+        background-position: center;
+    }  
+    .headerStyling {
+        color: white;
+        flex: 1 0 50px;
+        margin-top: 70px;
+    }
+    .subNav {
+        font-size: 35px;
+        margin: 0 60px;    
+    }
+
+    p {font-weight: 100;}
+
+    dd {
+        margin-left: 50px;
+        font-weight: 100;
+    }
+
+    .kamer-styling {margin-bottom: 2rem;}
+
+    dt b {font-weight: bolder;}
+
+    .flexContainer {flex-direction: column;}
+
+    article img {
+        height: 180px;
+        width: 100%;  
+    }
+    #kamers p {margin: 50px 20px 50px 20px;}
+
+    .locatieBox, .contactBox {
+        float: none;
+        text-align: center;
+        width: 100%;
+    } 
+    #postcode, #aankomstdatum, #vertrekdatum, #aantalkamers {max-width: 20%;}
+
+    #voornaam, #achternaam, #adres, #email, #plaats {max-width: 35%;}
+}
+
+@media (min-width:700px) and (max-width:1249px){
+    
+    article img {
+        height: 350px;
+        width: 75%;  
+    }
+    article p {height: 20px;}
+
+    #modal-content {
+        height: 60%;
+    }
+}
+@media (min-width:300px) and (max-width:699px){
+
+    main h1 {font-size: 1.5rem;}
+
+    h2 {margin: 5px;}
+
+    .h1Styling {
+        font-size: 2rem;
+        margin: 0px 10px;
+    }
+
+    #suite p {margin: 50px auto;
+    }
+    .headerStyling {margin-top: 20px;}
+
+    .subNav {
+        font-size: 35px;
+        margin: 0px 40px;    
+    }
+    table, tr, td { display: block;}
+
+    table {
+        width: 90%;
+        justify-content: center;
+    }
+
+    .voorgerecht, .hoofdgerecht, .dessert {display: none;} 
+
+    td {width: 100%;}
+
+    td:nth-child(1)::before {content:"Naam gerecht: "}
+    td:nth-child(2)::before {content:"Omschrijving: "}
+    td:nth-child(3)::before {content:"Prijs: "}
+    td:nth-child(4)::before {content:"Allergie: "}
+
+    form { width: 100%;}
+
+    #postcode, #aankomstdatum, #vertrekdatum, #aantalkamers {max-width: 55%;}
+    #voornaam, #achternaam, #adres, #email, #plaats {max-width: 80%;}
+} 

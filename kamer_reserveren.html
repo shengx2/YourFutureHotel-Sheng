@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Academy Hotel en Restaurant</title>
+    <link href="css/master.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <nav>  
+        <nav>
+            <ul>
+                <li><a href="index.html" title="Home">Home</a></li>
+    
+                <li><a href="restaurant.html" title="Restaurant">Restaurant</a></li>
+    
+                <li><a href="kamer_reserveren.html" title="ReserveerKamer">Reserveer een kamer</a></li>
+    
+                <li><a href="contact.html" title="Contact">Contact</a></li>
+            </ul>
+        </nav>
+    </nav>
+    <header role="banner" aria-label="Welkom bij The Academy Hotel en Restaurant."></header>
+        <h1 class="h1Styling">THE ACADEMY HOTEL - KAMER RESERVEREN<br></h1>
+    </header>
+    <main role="main">
+
+        <section id="reserveerbevestiging" class="flexContainer" section role="region" aria-label="bevestiging">
+            <article class="kamerStyling">
+                <h2 id="reserveerh2"></h2>
+                <img id="reserveerImg">
+                <button class="reserveerBtn" id="annuleren">annuleren</button>
+            </article>
+            <form id="bookingForm"> 
+                
+                <br><label for="Voornaam">Vul uw voornaam in</label>
+                <input type="text" id="voornaam" name="voornaam" required>
+                
+                <label for="achternaam">Vul uw achternaam in</label>
+                <input type="text" id="achternaam" name="achternaam" required>
+
+                <label for="geslacht" id="geslacht">Geslacht</label><br>
+                <input type="radio" id="man" name="geslacht" value="man"><label for="man">man</label><br>
+                <input type="radio" id="vrouw" name="geslacht" value="vrouw"><label for="vrouw">vrouw</label><br>
+                                
+                <br>
+                <label for="adres">Vul uw adres in</label>
+                <input type="text" id="adres" name="adres">   
+
+                <label for="postcode">Vul uw postcode in</label>
+                <input type="text" id="postcode" name="postcode">
+
+                <label for="plaats">Vul uw plaats in</label>
+                <input type="text" id="plaats" name="plaats">
+
+                <label for="land">Kies een land uit</label>
+                <select name="land" id="land">
+                    <option value="duitsland">Duitsland</option>
+                    <option value="ijsland">Ijsland</option>
+                    <option value="belgie">Belgie</option>
+                    <option value="frankrijk">Frankrijk</option>
+                    <option value="china">China</option>
+                </select>
+            
+            
+                <label for="email">Vul uw email in</label>
+                <input type="email" id="email" name="email" required>
+                
+                <label for="aankomstdatum">Vul uw aankomstdatum in</label>
+                <input type="date" id="aankomstdatum" name="aankomstdatum" required>
+                
+                <label for="vertrekdatum">Vul uw vertrekdatum in</label>
+                <input type="date" id="vertrekdatum" name="vertrekdatum" required>
+                
+                <label for="aantalKamers">Aantal kamers</label>
+                <input type="number" id="aantalKamers" name="aantalKamers" required><br>
+            
+                <button type="submit" id="reserveerFormBtn" class="reserveerBtn">Reserveer deze kamer</button>
+            </form>
+
+            <div id="modal">
+                <button class="reserveerBtn" id="sluitModal">annuleren</button>
+                <article id="modal-content">
+                    <h3>Overzicht van de reservering:</h3>
+
+                    <p id="overzichtVoornaam"></p>
+                    <p id="overzichtAchternaam"></p>
+                    <p id="overzichtGeslacht"></p>
+                    <p id="overzichtAdres"></p>
+                    <p id="overzichtPostcode"></p>
+                    <p id="overzichtPlaats"></p>
+                    <p id="overzichtLand"></p>
+                    <p id="overzichtEmail"></p>
+                    <p id="overzichtAankomst"></p>
+                    <p id="overzichtVertrek"></p>
+                    <p id="overzichtKamers"></p>
+                    <form action="succes.html">
+                        <button class="reserveerBtn" id="reserveerModal" href="succes.html">Reserveer</button>
+                    </form> 
+                    <button class="reserveerBtn" id="annuleerModal">Annuleer</button>       
+                </div>
+        </section>
+
+        <section id="kamers" class="flexContainer" role="region" aria-label="kamers">
+            <article id="standaardkamer" class="kamerStyling flexItem">
+                <h2>Onze standaardkamer</h2>
+                <img src="images/standaardkamer.jpg">
+                <h3>Comfortabele hotelkamers voor een ontspannen verblijf.</h3>
+                <p class="example">Hotelkamers beschikken over twinbedden, een gezellig zitje in de kamer, een eigen badkamer met douche en toilet 
+                en een eigen terras.</p>
+                <button class="reserveerBtn" id="reserveerStandaard">RESERVEER NU</button>
+            </article>
+            <article id="familiekamer" class="kamerStyling flexItem">
+                <h2>Onze familiekamer</h2>
+                <img src="images/familiekamer.jpg">
+                <h3>Ruime familiekamers voor het hele gezin.</h3>
+                <p>Familiekamers zijn geschikt voor gezinnen, families of groepen. Deze kamers voor 4, 5 of 6 personen hebben een aparte
+                    woonkamer, twee slaapkamers, een badkamer en een eigen terras.</p>
+                <button class="reserveerBtn" id="reserveerFamilie">RESERVEER NU</button>
+            </article>
+            <article id="suite" class="kamerStyling flexItem">
+                <h2>Onze suite</h2>
+                <img src="images/suiteKamer.jpg">
+                <h3>Luxe, ruime suites voor extra comfort.</h3>                
+                <p>De suites zijn rustig gelegen en hebben een moderne uitstraling. In de suite kunt u genieten
+                    van een aparte woonkamer en ruime slaapkamer. De luxe badkamer biedt een comfortabel ligbad, inloopdouche en toilet.</p>
+                <button class="reserveerBtn" id="reserveerSuite">RESERVEER NU</button>
+            </article>
+        </section>                
+           
+    </main> 
+    <script src="js/script.js"></script> 
+    <script src="js/navbar.js"></script>
+    <script src="js/rooms.js"></script>
+    <script src="js/modal.js"></script> 
+</body>
+
+</html>
